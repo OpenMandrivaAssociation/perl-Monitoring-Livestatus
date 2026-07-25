@@ -1,19 +1,19 @@
 %define upstream_name    Monitoring-Livestatus
-%define upstream_version 0.64
+%define upstream_version 0.84
 
 %if %{_use_internal_dependency_generator}
 %define __noautoreq 'perl\\(Monitoring::Livestatus::Class::Abstract::Filter\\)|perl\\(Monitoring::Livestatus::Class::Abstract::Stats\\)'
 %endif
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Connector with multiple peers
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Monitoring/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://github.com/sni/Monitoring-Livestatus
+Source0:	https://cpan.metacpan.org/authors/id/N/NI/NIERLEIN/Monitoring-Livestatus-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
